@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import io from 'socket.io-client';
 
-const socket = io('http://192.168.29.172:5000', {
+const socket = io('https://shopwave-backend-ou9y.onrender.com', {
   transports: ['websocket', 'polling']
 });
-
 function App() {
   const [cart, setCart] = useState([]);
   const [isCartOpen, setIsCartOpen] = useState(false);
